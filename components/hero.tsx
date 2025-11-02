@@ -22,7 +22,7 @@ export function Hero() {
               <span className="text-muted-foreground">turned Web Developer</span>
             </h1>
             <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl text-pretty leading-relaxed">
-              Building modern web experiences with 14+ years of IT infrastructure expertise
+              "14+ years solving IT challenges, now crafting modern web experiences
             </p>
           </div>
 
