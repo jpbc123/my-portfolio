@@ -1,23 +1,67 @@
+"use client"
+
 import { Calendar } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
+import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 export function Experience() {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation()
+  const { ref: cardsRef, isVisible: cardsVisible } = useScrollAnimation(0.05)
+
   const experiences = [
     {
-      period: "2011 — Present",
-      title: "Sr. Application Support/DevOps Specialist",
-      company: "IT Industry",
+      period: "2011 – 2015",
+      title: "Service Desk Support Specialist",
+      company: "Accenture",
       description:
-        "Leading infrastructure management, cloud deployments, CI/CD pipelines, and system optimization. Extensive experience with monitoring, automation, and ensuring high availability of critical systems.",
+        "Provided expert technical support through multiple channels, handled Active Directory, Exchange, SharePoint issues, mobile communications, internal company websites and more. Progressed from the Philippines to Malaysia through the company's Global Careers Program.",
       highlights: [
-        "Infrastructure & Cloud Architecture",
-        "CI/CD Pipeline Development",
-        "System Monitoring & Optimization",
+        "ITIL",
+        "Customer & Technical Support",
+        "Exchange/Outlook",
         "Automation & Scripting",
       ],
     },
     {
-      period: "2024 — Present",
+      period: "2015 – 2019",
+      title: "Senior Application Support Analyst",
+      company: "Accenture",
+      description:
+        "Served as Application Maintenance Lead for Oracle Retail applications (POS & Store Inventory Management) for a Malaysian telco company. Managed a team of 3, served as client's main point of contact and SME while maintaining SLA compliance.",
+      highlights: [
+        "Oracle Retail Suite",
+        "Client Management",
+        "Automation & Scripting",
+        "Oracle Database",
+      ],
+    },
+    {
+      period: "2019 – 2020",
+      title: "Senior IT Dev/Ops Analyst",
+      company: "IT Business Solutions",
+      description:
+        "Developed and fixed RAID platform flows (a risk and fraud management platform), led system migration from traditional Linux to RedHat OpenShift/Kubernetes. Migrated Oracle SQL reports to PostgreSQL and ensured accurate reconciliations.",
+      highlights: [
+        "OpenShift/Kubernetes",
+        "PostgreSQL",
+        "Systems Integration",
+      ],
+    },
+    {
+      period: "2020 – Present",
+      title: "Senior IT Dev/Ops Analyst",
+      company: "DHL IT Services",
+      description:
+        "Leading application support for complex production systems, managing incident and change management processes. Acting as SME and conducting knowledge transfer sessions while ensuring 24x7 system reliability. Currently developing an AI chatbot using openAI API that will help reduce the workload for the team",
+      highlights: [
+        "ServiceNow",
+        "Release Management",
+        "ITSM/ITIL",
+        "AI Integration",
+      ],
+    },
+    {
+      period: "July 2025 - Present",
       title: "Web Developer",
       company: "Freelance",
       description:
@@ -25,8 +69,9 @@ export function Experience() {
       highlights: [
         "Full-Stack Development",
         "Modern Frontend Technologies",
-        "Performance Optimization",
-        "Deployment & Hosting",
+        "Content Management",
+		"Payment Gateway Integration",
+		"Deployment & Hosting",
       ],
     },
   ]
@@ -35,14 +80,28 @@ export function Experience() {
     <section id="experience" className="py-24 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-4xl">
         <div className="space-y-12">
-          <div className="space-y-2">
-            <h2 className="text-sm font-mono text-accent uppercase tracking-wider">Experience</h2>
-            <h3 className="text-3xl sm:text-4xl font-bold">Career Journey</h3>
+          <div ref={headerRef} className="space-y-2">
+            <h2 className={`text-sm font-mono text-accent uppercase tracking-wider transition-opacity ${
+              headerVisible ? 'animate-fade-up' : 'opacity-0'
+            }`}>
+              Experience
+            </h2>
+            <h3 className={`text-3xl sm:text-4xl font-bold transition-opacity ${
+              headerVisible ? 'animate-fade-up' : 'opacity-0'
+            }`} style={{ animationDelay: '0.1s' }}>
+              Career Journey
+            </h3>
           </div>
 
-          <div className="space-y-8">
+          <div ref={cardsRef} className="space-y-8">
             {experiences.map((exp, index) => (
-              <Card key={index} className="border-l-4 border-l-accent">
+              <Card 
+                key={index} 
+                className={`border-l-4 border-l-accent transition-opacity ${
+                  cardsVisible ? 'animate-slide-left' : 'opacity-0'
+                }`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 <CardContent className="p-6 space-y-4">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                     <div>

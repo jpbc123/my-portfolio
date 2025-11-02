@@ -44,7 +44,7 @@ export function Navigation() {
             onClick={() => scrollToSection("hero")}
             className="text-lg font-mono font-semibold hover:text-accent transition-colors"
           >
-            {"<dev/>"}
+            {"<jpbc />"}
           </button>
 
           {/* Desktop Navigation */}

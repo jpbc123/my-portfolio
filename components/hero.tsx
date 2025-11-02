@@ -38,7 +38,7 @@ export function Hero() {
 
           <div className="flex items-center gap-4 pt-4">
             <a
-              href="https://github.com"
+              href="https://github.com/jpbc123"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -47,7 +47,7 @@ export function Hero() {
               <span className="sr-only">GitHub</span>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/john-peter-catindig-724966133/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -56,7 +56,7 @@ export function Hero() {
               <span className="sr-only">LinkedIn</span>
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:jpbcatindig@outlook.com"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <Mail className="h-5 w-5" />

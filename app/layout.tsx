@@ -8,10 +8,9 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Portfolio | DevOps & Web Developer",
+  title: "Portfolio | John Peter Bautista Catindig",
   description:
-    "Sr. Application Support/DevOps Specialist with 14+ years of IT experience, now building modern web applications",
-  generator: "v0.app",
+    "Sr. Application Support/DevOps Specialist with 14+ years of IT experience, now building modern web applications"
 }
 
 export default function RootLayout({
