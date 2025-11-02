@@ -27,7 +27,7 @@ export function Projects() {
         "An elegant and straight-to-the-point website showcasing the company's printing solutions. Whether it is a billboard or 3D signages, this company can do it all to elevate your brand.",
       status: "In Progress",
       url: "https://imaxpixel.vercel.app/",
-      tags: ["Next.js", "TypeScript", "Image Processing", "Vercel"],
+      tags: ["React", "TypeScript", "Admin Dashboard", "Vercel"],
       image: "/imax-pixel.png",
     },
     {
